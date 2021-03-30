@@ -22,7 +22,8 @@ const foldersGet = async(req = request, res = response) => {
 
         console.log(error);
         res.status(500).json({
-            msg: 'Server error'
+            msg: 'Server error',
+            error
         })
     }
 }
@@ -54,7 +55,8 @@ const foldersPost = async(req = request, res = response) => {
     } catch (error) {
         console.log(error);
         res.status(500).json({
-            msg: 'Server error'
+            msg: 'Server error',
+            error
         })
     }
 }

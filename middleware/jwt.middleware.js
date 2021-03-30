@@ -20,7 +20,8 @@ const checkToken = async(req = request, res = response, next) => {
 
         console.log(error);
         res.status(500).json({
-            msg: 'Error server'
+            msg: 'Error server',
+            error
         })
     }
 }

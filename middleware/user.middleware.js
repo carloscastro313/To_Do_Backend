@@ -26,7 +26,8 @@ const checkEmail = async(req = request, res = response, next) => {
 
         console.log(error);
         res.status(500).json({
-            msg: 'Error server'
+            msg: 'Error server',
+            error
         })
     }
 }
@@ -55,7 +56,8 @@ const checkUserName = async(req = request, res = response, next) => {
 
         console.log(error);
         res.status(500).json({
-            msg: 'Error server'
+            msg: 'Error server',
+            error
         })
     }
 }

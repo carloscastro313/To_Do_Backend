@@ -18,7 +18,8 @@ const createAccount = async(req = request, res = response) => {
 
         console.log(error);
         res.status(500).json({
-            msg: 'Error server'
+            msg: 'Error server',
+            error
         })
     }
 }

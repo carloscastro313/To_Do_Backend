@@ -88,7 +88,8 @@ const foldersDelete = async(req = request, res = response) => {
     } catch (error) {
 
         res.status(500).json({
-            msg: 'Server error'
+            msg: 'Server error',
+            error
         })
     }
 }

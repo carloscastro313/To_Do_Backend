@@ -21,7 +21,8 @@ const tasksGet = async(req = request, res = response) => {
 
         console.log(error);
         res.status(500).json({
-            msg: 'Server error'
+            msg: 'Server error',
+            error
         })
     }
 }
@@ -41,7 +42,8 @@ const tasksPost = async(req = request, res = response) => {
 
         console.log(error);
         res.status(500).json({
-            msg: 'Server error'
+            msg: 'Server error',
+            error
         })
     }
 }
@@ -69,7 +71,8 @@ const tasksUpdate = async(req = request, res = response) => {
 
         console.log(error);
         res.status(500).json({
-            msg: 'Server error'
+            msg: 'Server error',
+            error
         })
     }
 }
@@ -96,7 +99,8 @@ const tasksDelete = async(req = request, res = response) => {
 
         console.log(error);
         res.status(500).json({
-            msg: 'Server error'
+            msg: 'Server error',
+            error
         })
     }
 }

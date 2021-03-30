@@ -51,10 +51,7 @@ const foldersPost = async(req = request, res = response) => {
         await folder.save();
 
         res.json(folder);
-
-
     } catch (error) {
-
         console.log(error);
         res.status(500).json({
             msg: 'Server error'

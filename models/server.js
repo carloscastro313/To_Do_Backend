@@ -9,7 +9,14 @@ class Server {
         this.app = express();
         this.port = process.env.PORT;
         this.server = require('http').createServer(this.app);
-        this.app.use(cors({ allowedHeaders: '*', origin: ['https://examen-todo-app.herokuapp.com', 'http://localhost:4200'] }));
+        this.app.use(cors());
+        app.use((req, res, next) => {
+            res.header('Access-Control-Allow-Origin', '*');
+            res.header('Access-Control-Allow-Headers', 'Authorization, X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Allow-Request-Method');
+            res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
+            res.header('Allow', 'GET, POST, OPTIONS, PUT, DELETE');
+            next();
+        });
 
         this.paths = {
             user: '/user',

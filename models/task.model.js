@@ -7,8 +7,7 @@ const Tasks = db.define('tasks', {
         type: DataTypes.STRING
     },
     IsDone: {
-        type: DataTypes.BOOLEAN,
-        defaultValue: false
+        type: DataTypes.BOOLEAN
     },
     FolderId: {
         type: DataTypes.INTEGER,

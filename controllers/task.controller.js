@@ -60,7 +60,7 @@ const tasksUpdate = async(req = request, res = response) => {
                 msg: 'This task does not exist'
             });
         }
-        console.log(task);
+        console.log(body);
         await task.update(body);
 
         res.json(task);

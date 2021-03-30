@@ -9,7 +9,7 @@ class Server {
         this.app = express();
         this.port = process.env.PORT;
         this.server = require('http').createServer(this.app);
-        this.app.use(cors({ allowedHeaders: '*', origin: ['https://pacific-taiga-39548.herokuapp.com', 'http://localhost:4200'] }));
+        this.app.use(cors({ allowedHeaders: '*', origin: ['https://examen-todo-app.herokuapp.com', 'http://localhost:4200'] }));
 
         this.paths = {
             user: '/user',

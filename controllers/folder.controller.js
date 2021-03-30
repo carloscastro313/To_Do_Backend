@@ -22,7 +22,7 @@ const foldersGet = async(req = request, res = response) => {
 
         console.log(error);
         res.status(500).json({
-            msg: 'Hable con el administrador'
+            msg: 'Server error'
         })
     }
 }
@@ -42,7 +42,7 @@ const foldersPost = async(req = request, res = response) => {
 
         if (exist) {
             return res.status(400).json({
-                msg: 'Already exist a folder with the name of ' + body.FolderName
+                msg: 'There is already one with the name' + body.FolderName
             });
         }
 

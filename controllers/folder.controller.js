@@ -42,7 +42,7 @@ const foldersPost = async(req = request, res = response) => {
 
         if (exist) {
             return res.status(400).json({
-                msg: 'There is already one with the name' + body.FolderName
+                msg: 'There is already one with the name ' + body.FolderName
             });
         }
 
